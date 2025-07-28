@@ -1,8 +1,10 @@
-import { Express } from 'express';
-import publicRoutes from './public';
-import adminRoutes from '../admin/sync'; // ou outro nome, se for o caso
+import { Express } from "express";
+import adminRoutes from "../admin/sync";
+import moviesRoutes from "./movies";
 
-export function setupRoutes(app: Express) {
-  app.use(publicRoutes);
-  app.use(adminRoutes);
-}
+const setupRoutes = (app: Express) => {
+  app.use("/admin", adminRoutes);
+  app.use("/movies", moviesRoutes); 
+};
+
+export default setupRoutes;

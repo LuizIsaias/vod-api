@@ -2,7 +2,7 @@ import express from "express";
 import { config } from "dotenv";
 import "reflect-metadata";
 import { AppDataSource } from "./database/AppDataSource";
-import { setupRoutes } from "./api";
+import  setupRoutes  from "./api";
 
 config();
 

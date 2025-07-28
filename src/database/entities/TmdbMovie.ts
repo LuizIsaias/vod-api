@@ -19,6 +19,9 @@ export class TmdbMovie {
   @JoinColumn()
   vodItem!: VodItem;
 
+  @Column({ nullable: true })
+  originalTitle?: string; // ← ADICIONADO AQUI
+
   @Column({ type: 'text', nullable: true })
   overview?: string;
 
